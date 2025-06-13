@@ -6,6 +6,7 @@ export default function useOrders() {
     queryKey: ["orders"],
     queryFn: getOrders,
   });
+  console.log(data?.data);
   return {
     orders: data?.data,
     numberOfOrders: data?.totalCount,

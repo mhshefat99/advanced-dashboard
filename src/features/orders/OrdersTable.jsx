@@ -10,7 +10,7 @@ function OrdersTable() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [query, setQuery] = useState(searchParams.get("query") || "");
   const { orders, numberOfOrders, isLoading, error } = useOrders();
-  const [filteredOrders, setFilteredOrders] = useState(orders);
+  const [filteredOrders, setFilteredOrders] = useState(orders || []);
 
   useEffect(() => {
     if (!orders || orders.length === 0) return;

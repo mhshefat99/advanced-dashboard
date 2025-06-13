@@ -8,7 +8,7 @@ function Navbar() {
     <nav className="flex w-full items-center justify-between border p-2">
       <SidebarTrigger className="-m-2" />
       <div className="flex items-center gap-4">
-        <Link to="/">Dashboard</Link>
+        <Link to="/">ADB Dashboard</Link>
         <ToggleTheme />
         <UserDropdownMenu />
       </div>
