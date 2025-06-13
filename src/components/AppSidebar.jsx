@@ -27,7 +27,7 @@ function AppSidebar() {
             <Link to="/">
               <SidebarMenuButton>
                 <LayoutDashboard />
-                <span>MHShefat</span>
+                <span>ADV Dashboard</span>
               </SidebarMenuButton>
             </Link>
           </SidebarMenuItem>

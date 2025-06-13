@@ -59,7 +59,15 @@ const Columns = [
     accessorKey: "name",
     header: "Name",
     cell: ({ row }) => {
-      return <div>{row.getValue("name")}</div>;
+      return (
+        <div>
+          {
+            <Link to={`/products/${row.original.id}`}>
+              {row.getValue("name")}
+            </Link>
+          }
+        </div>
+      );
     },
   },
   {

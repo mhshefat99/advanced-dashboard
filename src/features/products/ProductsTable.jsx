@@ -7,6 +7,7 @@ import filterProducts from "./filterProducts";
 import { useSearchParams } from "react-router-dom";
 import LoadingSpinner from "@/components/LoadingSpinner";
 import ErrorComponent from "@/components/ErrorComponent";
+import CreateEditButton from "@/components/CreateEditButton";
 
 import {
   Select,
@@ -17,6 +18,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Button } from "@/components/ui/button";
 
 function ProductsTable() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -61,7 +63,13 @@ function ProductsTable() {
                 onChange={(e) => setQuery(e.target.value)}
               />
             </div>
-            <div>
+            <div className="flex flex-col gap-4">
+              <div className="self-end">
+                <CreateEditButton
+                  sessionType="create"
+                  createBtn={<Button>Create</Button>}
+                />
+              </div>
               <Select
                 defaultValue={category}
                 onValueChange={(value) => setCategory(value)}
